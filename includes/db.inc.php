@@ -1,0 +1,11 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "db_gallery";
+
+    try {
+        $con = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    } catch (PDOException $e) {
+        echo "Connection failed: ".$e->getMessage();
+    }
